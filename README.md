@@ -2,6 +2,10 @@
 A conference call implementation using WebRTC, Socket.io and Node.js. This demo is ideal for not more than 4 devices.
 
 
+Link to live deployed project-
+https://chatting-buzz.herokuapp.com/?room=hello_2453959777
+
+
 Please send the link of the url from your browser to invite your friends.
 
 
