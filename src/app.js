@@ -1,20 +1,20 @@
-let express = require( 'express' );
+let express = require("express");
 let app = express();
-const port = process.env.port || 3000;
-let server = require( 'http' ).Server( app );
-let io = require( 'socket.io' )( server );
-let stream = require( './ws/stream' );
-let path = require( 'path' );
-let favicon = require( 'serve-favicon' );
+const port = process.env.PORT || 3000;
+let server = require("http").Server(app);
+let io = require("socket.io")(server);
+let stream = require("./ws/stream");
+let path = require("path");
 
-app.use( favicon( path.join( __dirname, 'favicon.ico' ) ) );
-app.use( '/assets', express.static( path.join( __dirname, 'assets' ) ) );
+let favicon = require("serve-favicon");
 
-app.get( '/', ( req, res ) => {
-    res.sendFile( __dirname + '/index.html' );
-} );
+app.use(favicon(path.join(__dirname, "favicon.ico")));
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
 
-io.of( '/stream' ).on( 'connection', stream );
+io.of("/stream").on("connection", stream);
 
-server.listen( port );
+server.listen(process.env.PORT || 3000);
