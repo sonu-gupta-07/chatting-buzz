@@ -3,7 +3,7 @@ A conference call implementation using WebRTC, Socket.io and Node.js. This demo 
 
 
 Link to live deployed project-
-https://chatting-buzz.herokuapp.com/?room=hello_2453959777
+https://chatting-buzz.herokuapp.com/
 
 
 Please send the link of the url from your browser to invite your friends.
